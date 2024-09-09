@@ -1,0 +1,124 @@
+@import "../Scss-variables/variables";
+.header__page{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 3;
+}
+
+.nav__container{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+
+    .nav__menu_text{
+        padding: 0;
+        margin: 0;
+        color: #ed6221;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        @media (min-width: $tablet-bp) {
+            display: none;
+        }
+    }
+
+    .nav__burger_menu{
+    padding: 0;
+    margin: 0;
+    width: 60px;
+    @media (min-width: $tablet-bp) {
+        display: none;
+    }
+    }
+
+    .nav__close{
+        text-transform: uppercase;
+        margin-right: 30px;
+        font-weight: 700;
+        color: #ed6221;
+        @media (min-width: $tablet-bp) {
+            display: none;
+        }
+    }
+}
+
+
+.navbar{
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(99, 97, 97);
+}
+
+
+.nav__list {
+    @media (max-width: $tablet-bp) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      background: #fff;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      right: 0;
+      border-top: 1px solid #000;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #000;
+    }
+  
+    @media (min-width: $tablet-bp) {
+      display: none; /* Change display to flex for tablets and PCs */
+    //   position: relative;
+    //   justify-content: space-around;
+    //   align-items: center;
+    //   max-width: 85%;
+    //   margin: 0 auto;
+    }
+  
+    // @media (min-width: $desktop-bp) {
+    //   max-width: 60%;
+    // }
+}
+  
+.nav__list_tablet{
+    display: none;
+    @media (min-width: $tablet-bp) {
+        display: flex; /* Change display to flex for tablets and PCs */
+        position: relative;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 85%;
+        margin: 0 auto;
+      }
+    
+      @media (min-width: $desktop-bp) {
+        max-width: 60%;
+      }
+}
+
+.nav__link{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-weight:700;
+@media (min-width: $tablet-bp) {
+    margin-bottom: 15px;
+    font-size: $title-font-size--mobile;
+    color: #000;
+}
+}
+.active{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight:700;
+    font-size: $title-font-size--mobile;
+    color: #ed6221;
+    @media (min-width: $tablet-bp) {
+        margin-bottom: 15px;
+    }
+}
